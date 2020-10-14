@@ -1,12 +1,10 @@
 #include <iostream>
-#include <stack>
 #include <vector>
 #include <algorithm>
-#include <cmath>
 
 using namespace std;
 
-int euclidian(int a, int b)
+int euclidian(int a, int b)//return greatest common divisor of a and b
 {
     if(b == 0) return a;
     return euclidian(b, a % b);
@@ -19,11 +17,11 @@ int main()
     vector<int> v(n);
     vector<int> temp(n - 1);
     vector<int> ans;
-    for(auto& e : v) cin >> e;
+    for(auto& e : v) cin >> e;//input vector of v
     
     sort(v.begin(), v.end());
         
-    for(int i = 0; i < n - 1; i++)
+    for(int i = 0; i < n - 1; i++)//store v[i + 1] - v[i] into temp[i]
     {
         temp[i] = v[i + 1] - v[i];
     }
@@ -49,4 +47,3 @@ int main()
         if(e != 1) cout << e << " ";
     return 0;
 }
-
