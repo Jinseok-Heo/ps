@@ -18,8 +18,8 @@ int main(){
     int n;
     cin >> n;
     vector<int> v(n, 1000);
-    //for(auto& e : v)
-        //cin >> e;
+    for(auto& e : v)
+        cin >> e;
     
     sort(v.begin(), v.end());
     
