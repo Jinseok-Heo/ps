@@ -43,8 +43,6 @@ int main()
             ans *= (v_c[j].number + 1);
         
         cout << ans - 1 << "\n";
-        //for(int j = 0; j < v_c.size(); j++)
-            //cout << v_c[j].sort << " " << v_c[j].number << "\n";
     }
     
     return 0;
