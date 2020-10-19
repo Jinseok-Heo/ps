@@ -1,19 +1,15 @@
 #include <iostream>
-#include <stack>
-#include <queue>
-#include <vector>
 #include <algorithm>
-#include <string>
 
 using namespace std;
 
 pair<long long, long long> CountZero(long long n)
 {
     long long cnt_2 = 0, cnt_5 = 0;
-    for(long long i = 2; i <= n; i *= 2) cnt_2 += n / i;
-    for(long long i = 5; i <= n; i *= 5) cnt_5 += n / i;
+    for(long long i = 2; i <= n; i *= 2) cnt_2 += n / i;//count 2 of n!
+    for(long long i = 5; i <= n; i *= 5) cnt_5 += n / i;//count 5 of n!
     
-    return pair<long long, long long>(cnt_2, cnt_5);
+    return pair<long long, long long>(cnt_2, cnt_5);//return a pair of number of two and five about n!
 }
 
 int main()
