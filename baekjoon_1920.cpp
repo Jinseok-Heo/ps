@@ -1,11 +1,5 @@
 #include <iostream>
-#include <string>
 #include <algorithm>
-#include <deque>
-#include <vector>
-#include <stack>
-#include <queue>
-#include <list>
 
 using namespace std;
 
