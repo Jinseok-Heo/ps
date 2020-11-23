@@ -1,12 +1,7 @@
 #include <iostream>
-#include <iomanip>
+#include <iomanip>//for using setprecision and fixed
 #include <string>
-#include <algorithm>
-#include <deque>
-#include <vector>
 #include <stack>
-#include <queue>
-#include <list>
 
 using namespace std;
 
@@ -18,7 +13,7 @@ int main()
     cin >> n;
     string str;
     cin >> str;
-    int arr[26]{0, };//A responds to arr[0]
+    int arr[26]{0, };//A responds to arr[0] and Z responds to arr[25]
     stack<double> s;
     for(int i = 0; i < n; i++) cin >> arr[i];
     
