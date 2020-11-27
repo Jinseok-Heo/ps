@@ -1,12 +1,5 @@
 #include <iostream>
-#include <iomanip>
 #include <string>
-#include <algorithm>
-#include <deque>
-#include <vector>
-#include <stack>
-#include <queue>
-#include <list>
 #define I (int)temp.size() - 1
 using namespace std;
 
