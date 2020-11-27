@@ -1,12 +1,6 @@
 #include <iostream>
-#include <iomanip>
-#include <string>
 #include <algorithm>
-#include <deque>
 #include <vector>
-#include <stack>
-#include <queue>
-#include <list>
 #define MAX 500001
 
 using namespace std;
