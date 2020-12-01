@@ -1,12 +1,5 @@
 #include <iostream>
-#include <iomanip>
-#include <string>
-#include <algorithm>
-#include <deque>
 #include <vector>
-#include <stack>
-#include <queue>
-#include <list>
 using namespace std;
 
 vector<int> height;
@@ -23,7 +16,6 @@ int main()
 {
     ios_base:: sync_with_stdio(false);
     cin.tie(NULL);
-    
     int n, ans = 0;
     cin >> n;
     height.resize(n);
@@ -34,23 +26,19 @@ int main()
         r_idx = i + 1;
         target_idx = l_idx;
         if(l_idx >= 0) cnt++;
-        cout << "////" << endl;
         while(l_idx >= 0){
             if(target_idx != l_idx && compareSlope(target_idx, l_idx, i) == 1){
                 target_idx = l_idx;
                 cnt++;
-                cout << l_idx << " " << i << endl;
             }
             l_idx--;
         }
-        cout << endl;
         if(r_idx < n) cnt++;
         target_idx = r_idx;
         while(r_idx < n){
             if(target_idx != r_idx && compareSlope(target_idx, r_idx, i) == -1){
                 target_idx = r_idx;
                 cnt++;
-                cout << r_idx << " " << i << endl;
             }
             r_idx++;
         }
