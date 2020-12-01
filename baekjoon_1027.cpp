@@ -45,4 +45,5 @@ int main()
         ans = ans > cnt ? ans : cnt;
     }
     cout <<  ans << endl;
+    return 0;
 }
