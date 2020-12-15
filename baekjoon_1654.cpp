@@ -6,7 +6,7 @@
 #include <deque>
 
 using namespace std;
-
+//if there are more pieces than expected return true
 bool check(vector<int> v, long long n, long long k){
     int cnt = 0;
     for(int i = 0; i < v.size(); i++){
@@ -15,7 +15,7 @@ bool check(vector<int> v, long long n, long long k){
     if(cnt >= k) return true;
     else return false;
 }
-
+//find answer using binary search
 long long bin_search(vector<int> v, long long k, long long max){
     long long min = 1; long long mid = (min + max) / 2 + 1;
     while(min != max){
