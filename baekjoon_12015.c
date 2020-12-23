@@ -1,3 +1,4 @@
+//LIS Problem using binary search
 #define _CRT_NO_SECURE_WARNIGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +8,6 @@ int bin_search(int* arr, int n, int target){
     int left = 0, right = n, mid = 0;
     while(left != right){
         mid = (left + right) / 2;
-        //printf("%d %d %d\n", left, mid, right);
         if(arr[mid] >= target) right = mid;
         else left = mid + 1;
     }
