@@ -9,13 +9,14 @@ int n, m, v, res_size;
 int map[MAX][MAX];
 int res[MAX];
 
+//If target location "loc" is already exist return 0, if not return 1
 int check(int* arr, int loc, int len){
     for(int i = 0; i < len; i++){
         if(arr[i] == loc) return 0;
     }
     return 1;
 }
-
+//Find Graph With DFS Algorithm
 void dfs(int level, int loc){
     if(level == 1) {
         res[0] = loc;
@@ -28,7 +29,7 @@ void dfs(int level, int loc){
         }
     }
 }
-
+//Find Graph With BFS Algorithm
 void bfs(int loc){
     for(int i = 0; i < n; i++) res[i] = 0;  //Initialize res which functions like Queue
     int top = 0, bot = 0, q_size;
@@ -37,6 +38,7 @@ void bfs(int loc){
         int t_loc = res[top];
         for(int i = 0; i < n; i++){
             if(check(res, i, bot) && map[t_loc][i]){
+                //q.push(i)
                 res[bot++] = i;
             }
         }
