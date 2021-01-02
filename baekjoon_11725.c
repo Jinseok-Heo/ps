@@ -7,9 +7,9 @@
 #define TRUE 1
 #define FALSE 0
 
-int nodes[MAX][100];
-char isPassed[MAX];
-int parent_nodes[MAX];
+int nodes[MAX][100];    	//nodes[x][size] = y means x node and y node is connected (size != 0)
+char isPassed[MAX];		//isPassed functions as flags, passed(1) or not yet passed(0)
+int parent_nodes[MAX];		//parent_noeds[x] = y means parent's node of x is y
 
 void bfs(void){
     int q[MAX] = { 0, };
@@ -35,7 +35,7 @@ void bfs(void){
 int main(){
     int n;
     scanf("%d", &n);
-    
+    //nodes[x][0] is the number of nodes which are connected to x
     for(int i = 1; i < n; i++){
         int x, y;
         scanf("%d %d", &x, &y);
