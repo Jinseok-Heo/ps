@@ -22,6 +22,7 @@ void dfs(int level, int loc){
         res[0] = loc;
         res_size = 1;
     }
+    printf("%d ", loc + 1);
     for(int i = 0; i < n; i++){
         if(check(res, i, res_size) && map[loc][i]){
             res[res_size++] = i;
@@ -65,9 +66,6 @@ int main(){
     }
     v--;
     dfs(1, v);
-    for(int i = 0; i < res_size; i++){
-        printf("%d ", res[i] + 1);
-    }
     printf("\n");
     bfs(v);
     return 0;
