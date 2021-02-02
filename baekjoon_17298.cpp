@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <deque>
 #include <iomanip>
-#define MAX 1000000000
 
 using namespace std;
 
