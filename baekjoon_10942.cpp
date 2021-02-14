@@ -40,14 +40,6 @@ void palindrome(vector<int>& arr, vector< vector<bool> >& dp) {
     }
 }
 
-void print_dp(vector< vector<bool> >& dp) {
-    int n = dp.size();
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) cout << dp[i][j] << " ";
-        cout << "\n";
-    }
-}
-
 int main(){
     ios_base:: sync_with_stdio(false);
     cin.tie(NULL);
@@ -61,8 +53,7 @@ int main(){
     for(int i = 0; i < m; i++){
         int s, e;
         cin >> s >> e;
-        //cout << dp[s][e] << "\n";
+        cout << dp[s][e] << "\n";
     }
-    print_dp(dp);
     return 0;
 }
