@@ -14,12 +14,6 @@ void input_data(int* n, int* m, vector<int>& memory, vector<int>& cost);
 void init_dp(vector< vector<int> >& dp, vector<int>& memory, vector<int>& cost);
 void update_dp(vector< vector<int> >& dp, vector<int>& memory, vector<int>& cost);
 int find_ans(vector< vector<int> >& dp, int n, int m);
-void print_dp(vector< vector<int> >& dp, int n) {
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < 20; j++) cout << setfill(' ') << setw(4) << dp[i][j] << " ";
-        cout << "\n";
-    }
-}
 
 int main(){
     ios_base:: sync_with_stdio(false);
@@ -27,13 +21,15 @@ int main(){
     int n, m;
     vector<int> memory, cost;
     vector< vector<int> > dp(MAX_APP, vector<int>(MAX_COST, 0));
+    
     input_data(&n, &m, memory, cost);
     init_dp(dp, memory, cost);
     update_dp(dp, memory, cost);
+    
     cout << find_ans(dp, n, m) << "\n";
-    print_dp(dp, n);
     return 0;
 }
+
 void input_data(int* n, int* m, vector<int>& memory, vector<int>& cost) {
     cin >> *n >> *m;
     memory.resize(*n);
