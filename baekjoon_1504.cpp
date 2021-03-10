@@ -6,6 +6,7 @@
 #include <deque>
 #include <iomanip>
 #define p pair<int, int>
+#define INT_MAX 1000000
 
 using namespace std;
 
@@ -52,8 +53,6 @@ int dijkstra(vector< vector<p> >& dist, int start_loc, int end_loc) {
             }
         }
     }
-    //for(int i = 0; i < n; i++) cout << min_dist[i] << " ";
-    //cout << endl;
     return min_dist[end_loc];
 }
 
