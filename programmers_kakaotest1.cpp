@@ -1,3 +1,5 @@
+//kakao coding test Searching Rank
+
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -7,7 +9,6 @@
 #include <iomanip>
 #include <functional>
 #include <unordered_map>
-#define p pair<int, int>
 
 using namespace std;
 
