@@ -7,8 +7,7 @@
 #include <iomanip>
 #include <functional>
 #include <unordered_map>
-#define p pair<ll, ll>
-#define ll long long
+
 #define INF 1000000000
 
 using namespace std;
@@ -23,7 +22,6 @@ int main() {
     int n, m;
     vector<vector<int>> distInfo;
     inputData(&n, &m, distInfo);
-
     Floyd_Warshall(distInfo);
 
     for(int i = 0; i < n; i++) {
@@ -53,18 +51,8 @@ void Floyd_Warshall(vector<vector<int>> &dist) {
 
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
-            cout << dist[i][j] << " ";
-        }
-        cout << "\n";
-    }
-
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            if(j == i) continue;
             for(int k = 0; k < n; k++) {
-                if(k == i || j == k) continue;
                 if(dist[j][k] > dist[j][i] + dist[i][k]) {
-                    cout << dist[j][k] << " " << dist[j][i] << " " << dist[i][k] << "\n";
                     dist[j][k] = dist[j][i] + dist[i][k];
                 }
             }
