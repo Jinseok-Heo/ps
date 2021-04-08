@@ -7,8 +7,7 @@
 #include <iomanip>
 #include <functional>
 #include <unordered_map>
-#define p pair<int, int>
-#define ll long long
+
 #define INF 1000000000
 
 using namespace std;
@@ -30,7 +29,7 @@ void initDp(vector<vector<int>>& dp) {
 }
 
 int updateDp(vector<vector<int>>& dp, vector<vector<info>>& dist) {
-    int n = dp.size(); int m = dp[0].size();
+    int n = dp.size(); int m = dp[0].size() - 1;
     priority_queue<info, vector<info>, compare> pq;
 
     pq.push(info{0, 0, 0});
