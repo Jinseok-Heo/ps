@@ -74,7 +74,7 @@ string solution(string play_time, string adv_time, vector<string> logs) {
         for(int s = new_logs[i].first; s < new_logs[i].second; s++)
             n_playing[s]++;
 
-    int sum = 0, ans = 0, max_sum;
+    ll sum = 0, ans = 0, max_sum;
     for(int i = 0; i < adv_t; i++){
         sum += n_playing[i];
     }
