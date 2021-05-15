@@ -26,7 +26,6 @@ p solution(int n, vector<int>& num) {
     p res;
     sort(num.begin(), num.end());
     int l_idx = 0, r_idx = n - 1;
-    cout << num[l_idx] << " " << num[r_idx] << '\n';
     if(num[l_idx] > 0 && num[r_idx] > 0) {
         return make_pair(num[0], num[1]);
     }
