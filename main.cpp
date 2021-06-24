@@ -1,18 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <stack>
-#include <queue>
-#include <algorithm>
-#include <deque>
-#include <iomanip>
-#include <functional>
-#include <unordered_map>
-#include <random>
-#include <ctime>
-
-// #define p pair<int, vector<int>>
-// #define ll long long
-// #define INF 9876543211
 
 using namespace std;
 
@@ -24,7 +11,6 @@ void input_data(vector<int>& v) {
 }
 
 vector<int> find_res(const vector<int>& v, const vector<int>& dp, int max_idx) {
-    // assert(dp.size());
     vector<int> res;
     res.push_back(v[max_idx]);
     while (max_idx >= 0) {
@@ -43,7 +29,6 @@ vector<int> find_res(const vector<int>& v, const vector<int>& dp, int max_idx) {
 }
 
 void LIS(const vector<int>& v) {
-    // assert(v.size());
     int l = 1;
     int max_idx = 0;
     vector<int> res;
@@ -65,11 +50,6 @@ void LIS(const vector<int>& v) {
     res = find_res(v, dp, max_idx);
 
     cout << l << '\n';
-
-    // cout << "dp: ";
-    // for (int& ele : dp)
-    //     cout << ele << " ";
-    // cout << "res: ";
     for (int &ele : res)
         cout << ele << " ";
     cout << '\n';
