@@ -1,26 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <stack>
-#include <queue>
-#include <algorithm>
-#include <deque>
-#include <iomanip>
-#include <functional>
-#include <unordered_map>
-#include <random>
-#include <ctime>
-
-// #define p pair<int, vector<int>>
-// #define ll long long
-// #define INF 9876543211
-
-/*
-use Two Pointers
-time limits: 2sec
-mem limits: 128MB
-
-n <= 4000000
-*/
 
 using namespace std;
 
